@@ -105,12 +105,11 @@ Write 5-7 lines that function as an "elevator pitch": a concise, compelling intr
 
 **Create 2-3 profile statement templates for your main role types:**
 
-<!-- SETUP: These are populated based on your background -->
-**For [YOUR_PRIMARY_ROLE_TYPE] roles:**
-> [YOUR_PROFILE_STATEMENT_TEMPLATE_1]
+**For AI Solutions Architect / Forward Deployed AI Engineer roles:**
+> AI Solutions Architect who designs and delivers enterprise AI solutions, intelligent automation, and full-stack applications from discovery through deployment and adoption. Builds AI agent systems and automation workflows using Next.js, React, Node.js, and the Microsoft Power Platform, then drives hands-on user adoption directly with stakeholders. Combines solution-architecture rigor with founder-level full-stack execution, shipping production platforms like Sequoyah Careers end to end.
 
-**For [YOUR_SECONDARY_ROLE_TYPE] roles:**
-> [YOUR_PROFILE_STATEMENT_TEMPLATE_2]
+**For Product Owner / AI Enablement Lead roles:**
+> Product Owner and AI Enablement Lead who has driven enterprise AI agent rollouts from stakeholder alignment through adoption, reducing research time by up to 40% at BNY Mellon. Builds training and enablement programs from scratch, leads teams of 30+, and designs intelligent automation workflows with Microsoft Power Platform. Operates comfortably in highly regulated, compliance-driven environments where accuracy and governance are critical.
 
 ### Core Competencies / Skills Section (Best Practice)
 Reorder and emphasize based on the role. Use bold category labels.

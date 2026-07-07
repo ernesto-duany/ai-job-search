@@ -16,9 +16,9 @@ How well do the required/preferred skills align with the candidate's capabilitie
 | 40-59 | Partial match, significant upskilling needed |
 | 0-39 | Fundamental mismatch |
 
-**Strong match areas:** [YOUR_PRIMARY_SKILLS]
-**Moderate match areas:** [YOUR_SECONDARY_SKILLS]
-**Weak match areas:** [SKILLS_YOU_LACK]
+**Strong match areas:** AI solution architecture & design, Generative AI/LLM applications, AI agents & intelligent automation workflows, full-stack development (Next.js/React/Node.js), product ownership & requirements gathering, stakeholder management, regulated/compliance environments (financial services)
+**Moderate match areas:** Formal enterprise-architecture frameworks/certifications (e.g. TOGAF), cloud-platform-specific engineering (AWS/Azure/GCP), MLOps and model-training pipelines
+**Weak match areas:** Deep hands-on ML/data science (model development, MLOps at scale) - profile shows AI enablement/adoption/product ownership rather than ML engineering; B.S. Computer Science still in progress
 
 ### 2. Experience Match (0-100)
 Does work history align with what they're looking for?
@@ -30,9 +30,9 @@ Does work history align with what they're looking for?
 | 40-59 | Adjacent experience, would need to make the case |
 | 0-39 | Unrelated experience |
 
-**Strong:** [YOUR_DIRECT_EXPERIENCE_DOMAINS]
-**Moderate:** [YOUR_ADJACENT_EXPERIENCE]
-**Entry-level:** [ROLES_WITH_LIMITED_EXPERIENCE]
+**Strong:** AI solution architecture, product ownership for AI/automation rollouts, full-stack web development, financial services compliance (OFAC/AML)
+**Moderate:** Enterprise architecture roles requiring formal certification (TOGAF etc.); pure software engineering roles requiring deep backend/infra specialization
+**Entry-level:** Data science / ML engineering roles requiring hands-on model-building experience
 
 ### 3. Behavioral/Culture Fit (0-100)
 Does the role and company culture match the behavioral profile?
@@ -63,19 +63,19 @@ Does this role advance career goals and contain tasks that energize?
 | 0-39 | Dead end or backwards step |
 
 **Career goals:**
-- [YOUR_CAREER_GOAL_1]
-- [YOUR_CAREER_GOAL_2]
-- [YOUR_CAREER_GOAL_3]
+- Transition from AI Solutions Architect into a Forward Deployed AI Engineer or "AI-native" engineer role
+- Grow into a technical Lead position in applied AI
+- Stay close to hands-on building (full-stack + AI agents) rather than pure process/architecture-only roles
 
 **Motivation filter:** Evaluate not just whether you *can* do the tasks, but whether the tasks will *energize* you. Consider:
-- Tasks that energize: [YOUR_ENERGIZING_TASKS]
-- Tasks that drain: [YOUR_DRAINING_TASKS]
+- Tasks that energize: Building and shipping AI agent/automation systems end-to-end; hands-on full-stack development; owning a solution from discovery through deployment and adoption; working directly with stakeholders/clients to solve real problems
+- Tasks that drain: *(inferred, confirm with candidate)* Purely manual, low-automation compliance review work with no room to build or improve process; slow-moving initiatives with no path to shipping
 - Non-task factors: leadership style, department culture, company values, degree of autonomy
 
 **Life situation alignment:** Consider personal constraints:
-- **Security**: [YOUR_FINANCIAL_SITUATION_CONTEXT]
-- **Flexibility**: [YOUR_SCHEDULE_CONSTRAINTS]
-- **Professional development**: [YOUR_GROWTH_PRIORITIES]
+- **Security**: Currently employed full-time at BNY Mellon while running OpSight USA as founder - stable income allows selectivity; target base salary $100k+
+- **Flexibility**: Hybrid preferred; open to roles within ~40 miles of 32746 (Lake Mary, FL) or fully remote; contract positions accepted but not preferred
+- **Professional development**: Pursuing B.S. Computer Science (in progress) at UCF; actively moving career from architecture/compliance toward hands-on AI-native engineering
 
 ### 6. Salary Benchmark (Optional)
 

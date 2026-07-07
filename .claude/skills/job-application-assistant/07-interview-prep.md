@@ -12,28 +12,35 @@ Keep answers to 1-2 minutes. Be specific. End with what you learned or would do 
 
 <!-- These are populated by /setup from your actual experience. Below are templates showing the format. -->
 
-### 1. [PROJECT_NAME] ([SKILL_DEMONSTRATED])
-**S:** [CONTEXT - what was happening, what was the problem]
-**T:** [YOUR RESPONSIBILITY - what you specifically needed to do]
-**A:** [WHAT YOU DID - specific actions, tools, methods]
-**R:** [OUTCOME - measurable results, adoption, impact]
-**Use for:** "[QUESTION_TYPE_1]", "[QUESTION_TYPE_2]"
+### 1. Enterprise AI Agent Rollout at BNY Mellon (AI Adoption & Product Ownership)
+**S:** BNY Mellon wanted to roll out an enterprise AI agent to speed up research-heavy operational work, in a process-heavy environment where change needs stakeholder buy-in.
+**T:** As Product Owner for the rollout, responsible for AI adoption, user enablement, and stakeholder alignment across the department.
+**A:** Drove the rollout end-to-end: aligned stakeholders, ran user enablement, and managed the operational transformation needed to get the team actually using the new AI agent day to day.
+**R:** Reduced research time by up to 40%.
+**Use for:** "Tell me about a time you drove adoption of a new technology", "How do you get stakeholders on board with change?"
 
-### 2. [PROJECT_NAME] ([SKILL_DEMONSTRATED])
-**S:** [CONTEXT]
-**T:** [YOUR RESPONSIBILITY]
-**A:** [WHAT YOU DID]
-**R:** [OUTCOME]
-**Use for:** "[QUESTION_TYPE_1]", "[QUESTION_TYPE_2]"
+### 2. Building a Training Platform From Scratch (Zero-to-One Execution)
+**S:** As Operations Program Lead for a team of 30 operators, there was no standardized onboarding or training tooling in place.
+**T:** Needed to raise onboarding quality and accelerate how fast new processes were adopted across the team.
+**A:** Designed and built a training platform from scratch, introducing new tooling where none had existed before.
+**R:** Standardized onboarding and accelerated adoption of new processes across a 30-person team.
+**Use for:** "Tell me about a time you built something from nothing", "Describe a time you led a team through a process change"
 
-### 3. [PROJECT_NAME] ([SKILL_DEMONSTRATED])
-**S:** [CONTEXT]
-**T:** [YOUR RESPONSIBILITY]
-**A:** [WHAT YOU DID]
-**R:** [OUTCOME]
-**Use for:** "[QUESTION_TYPE_1]", "[QUESTION_TYPE_2]"
+### 3. Shipping Sequoyah Careers (Full-Stack Ownership as a Founder)
+**S:** As Founder of OpSight USA, identified an opportunity to build a healthcare staffing platform.
+**T:** Owned the product end-to-end - architecture, build, and launch - with no team to delegate to.
+**A:** Architected and built Sequoyah Careers using Next.js, React, and Node.js, including a dynamic job-listing system and an end-to-end application form integrated with Resend for transactional email delivery.
+**R:** Built and shipped a working platform end-to-end, from solution architecture through deployment.
+**Use for:** "Tell me about something you built end-to-end", "Describe your full-stack experience", "Why should we trust you with ambiguous, self-directed work?"
 
-<!-- Add more STAR examples as needed. Aim for 4-6 covering different competencies. -->
+### 4. Improving OFAC/AML Screening Accuracy (Rigor Under Regulation)
+**S:** As a Senior OFAC/AML Sanctions Review Operator, high-risk screening workflows were generating false positives that cost investigation time.
+**T:** Responsible for leading OFAC sanctions screening on high-risk entities and jurisdictions, and for conducting enhanced due diligence (EDD) in line with BSA/AML requirements.
+**A:** Contributed to process improvements targeted at screening efficiency.
+**R:** Enhanced screening efficiency and reduced false-positive rates.
+**Use for:** "Tell me about a time you improved a process", "How do you operate in a highly regulated environment?"
+
+<!-- Examples 2 and 4 only have qualitative outcomes in the source resume - add hard numbers before a real interview if you have them. Add more STAR examples as needed; aim for 4-6 covering different competencies. -->
 
 ## Common Tough Questions
 

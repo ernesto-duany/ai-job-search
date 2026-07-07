@@ -1,10 +1,10 @@
-%% Example CV - [YOUR_NAME]
+%% Example CV - Ernesto Duany
 %% Comprehensive overview of all competencies, experience, and achievements.
 %% Use as a master reference when tailoring role-specific CVs.
 %%
-%% SETUP: Run /setup to populate this with your actual information.
 %% Compile with: lualatex main_example.tex
 %% (pdflatex often fails on modern MiKTeX with fontawesome5 font-expansion errors.)
+%% NOTE: Phone number not yet provided - add \phone[mobile]{...} below once available.
 
 \documentclass[11pt,a4paper,sans]{moderncv}
 \moderncvstyle{banking}
@@ -24,18 +24,17 @@
     linkcolor=blue,
     filecolor=magenta,
     urlcolor=blue,
-    pdftitle={[YOUR_NAME] - CV},
+    pdftitle={Ernesto Duany - CV},
     pdfpagemode=FullScreen,
 }
 \usepackage[scale=0.80]{geometry}
 \usepackage{import}
 
 % personal data
-\name{[First]}{[Last]}
-\address{[Your Address, City, Country]}{}{}
-\phone[mobile]{[+XX XXXXXXXXXX]}
-\email{[your.email@example.com]}
-\extrainfo{\href{[https://linkedin.com/in/your-profile]}{LinkedIn}, \href{[https://github.com/your-username]}{GitHub}}
+\name{Ernesto}{Duany}
+\address{Lake Mary, FL}{}{}
+\email{alejandrodc1732@gmail.com}
+\extrainfo{\href{https://linkedin.com/in/ernesto-duanyyy}{LinkedIn}, \href{https://ernesto-duany.github.io}{Portfolio}}
 
 \begin{document}
 
@@ -46,7 +45,7 @@
 % ============================================================
 
 \vspace{6pt}
-\small{[Write a 3-5 line profile statement tailored to the role you're applying for. Focus on what makes you uniquely qualified. Example: "Data scientist with a PhD in [field] and X years of industry experience. Combines deep domain expertise in [domain] with strong applied machine learning and Python development skills. Experienced in developing end-to-end ML pipelines, from data ingestion to stakeholder-facing dashboards."]}
+\small{AI Solutions Architect who designs and delivers enterprise AI solutions, intelligent automation, and full-stack applications from discovery through deployment and adoption. Combines hands-on engineering (Next.js, React, Node.js) with product ownership, stakeholder management, and change management in highly regulated financial environments where accuracy, compliance, and governance are critical.}
 
 % ============================================================
 %     CORE COMPETENCIES
@@ -56,15 +55,17 @@
 \vspace{1pt}
 \begin{itemize}
 
-\item \textbf{[Skill Category 1]}: [Specific skills, frameworks, tools. Be concrete.]
+\item \textbf{AI Solution Architecture \& Design}: Architecting enterprise AI agents, intelligent automation, and full-stack systems from discovery through deployment
 
-\item \textbf{[Skill Category 2]}: [Specific skills, frameworks, tools.]
+\item \textbf{Generative AI, LLMs \& AI Agents}: Prompt engineering, AI workflow design, and driving AI adoption/enablement across teams
 
-\item \textbf{[Skill Category 3]}: [Specific skills, frameworks, tools.]
+\item \textbf{Full-Stack Development}: Next.js (App Router), React, Node.js, REST APIs, deployed on Vercel
 
-\item \textbf{[Skill Category 4]}: [Domain expertise, methods, approaches.]
+\item \textbf{Product Ownership \& Stakeholder Management}: Requirements gathering, roadmapping, cross-functional leadership, change management
 
-\item \textbf{[Skill Category 5]}: [Tools, platforms, software.]
+\item \textbf{Intelligent Automation}: Microsoft Power Platform (Power Automate, Power Apps), Copilot Studio, AI Builder
+
+\item \textbf{Risk \& Regulatory Compliance}: OFAC sanctions screening, AML investigations, BSA/AML compliance in high-governance financial environments
 
 \end{itemize}
 
@@ -76,32 +77,59 @@
 \vspace{3pt}
 \begin{itemize}
 
-% --- Most Recent Role ---
-\item{\cventry{[YYYY--Present]}{[Job Title]}{[Company]}{[City, Country]}{}{\vspace{1pt}
+% --- OpSight USA ---
+\item{\cventry{Jan 2026--Present}{Founder | AI Solutions Architect \& Product Owner}{OpSight USA (Self-Employed)}{Lake Mary, FL}{}{\vspace{1pt}
 \begin{itemize}
-    \item [Achievement or responsibility 1 - be specific, use numbers where possible]
-    \item [Achievement or responsibility 2]
-    \item [Achievement or responsibility 3]
-    \item [Achievement or responsibility 4]
+    \item Architect enterprise-grade full-stack applications and AI-enabled solutions in Next.js, defining solution architecture, application architecture, systems integration strategy, API design, and deployment architecture
+    \item Built and shipped Sequoyah Careers, a healthcare staffing platform with a dynamic job-listing system and an end-to-end application form integrated with Resend for transactional email delivery
+    \item Lead discovery workshops with stakeholders, translating business requirements into technical solution blueprints, product roadmaps, and implementation strategies
+    \item Drive product adoption through user guides, documentation, and hands-on enablement, incorporating client feedback into iterative improvements
 \end{itemize}}}
 
 \vspace{3pt}
 
-% --- Previous Role ---
-\item{\cventry{[YYYY--YYYY]}{[Job Title]}{[Company]}{[City, Country]}{}{\vspace{1pt}
+% --- BNY Mellon: Operations Program Lead ---
+\item{\cventry{Sep 2024--Present}{Operations Program Lead | Training, AI Enablement, Product Owner \& Risk Oversight}{BNY Mellon}{}{}{\vspace{1pt}
 \begin{itemize}
-    \item [Achievement or responsibility 1]
-    \item [Achievement or responsibility 2]
-    \item [Achievement or responsibility 3]
+    \item Lead a team of 30 operators, owning day-to-day performance, training, and workflow improvements
+    \item Designed and built a training platform from scratch, standardizing onboarding and accelerating adoption of new processes
+    \item Product Owner for an enterprise AI agent rollout, driving AI adoption and stakeholder alignment while reducing research time by up to 40\%
+    \item Designed intelligent automation workflows using Microsoft Power Platform and Power Automate to streamline business processes
 \end{itemize}}}
 
 \vspace{3pt}
 
-% --- Earlier Role ---
-\item{\cventry{[YYYY--YYYY]}{[Job Title]}{[Company]}{[City, Country]}{}{\vspace{1pt}
+% --- BNY Mellon: Senior OFAC/AML ---
+\item{\cventry{Oct 2023--Sep 2024}{Senior OFAC / AML Sanctions Review Operator, Level 4}{BNY Mellon}{}{}{\vspace{1pt}
 \begin{itemize}
-    \item [Achievement or responsibility 1]
-    \item [Achievement or responsibility 2]
+    \item Led OFAC sanctions screening on high-risk entities and jurisdictions; conducted enhanced due diligence (EDD) per BSA/AML requirements
+    \item Contributed to process improvements that enhanced screening efficiency and reduced false-positive rates
+\end{itemize}}}
+
+\vspace{3pt}
+
+% --- Milenium: Senior Business Systems Architect ---
+\item{\cventry{Jan 2020--Mar 2026}{Senior Business Systems Architect | AI Solutions Architect}{Milenium Computer Services, Inc. (Freelance)}{Remote}{}{\vspace{1pt}
+\begin{itemize}
+    \item Primary client-facing liaison, leading discovery sessions with operations and compliance stakeholders to automate manual processes
+    \item Architected enterprise systems and digital transformation initiatives, translating business requirements into scalable technical architectures
+    \item Built and delivered full-stack applications, handling installation, configuration, and end-to-end implementation
+\end{itemize}}}
+
+\vspace{3pt}
+
+% --- Milenium: Intern ---
+\item{\cventry{Jan 2017--Jan 2020}{Full-Stack Developer Intern}{Milenium Computer Services, Inc. (Internship)}{Remote}{}{\vspace{1pt}
+\begin{itemize}
+    \item Developed full-stack features across frontend and backend, building foundational web development experience
+\end{itemize}}}
+
+\vspace{3pt}
+
+% --- Apple ---
+\item{\cventry{Apr 2023--Oct 2023}{Technical Support Specialist}{Apple}{}{}{\vspace{1pt}
+\begin{itemize}
+    \item Resolved hardware and software issues, maintaining detailed documentation for consistent, high-quality resolutions
 \end{itemize}}}
 
 \end{itemize}
@@ -114,16 +142,28 @@
 \vspace{1pt}
 \begin{itemize}
 
-\item{\cventry{[YYYY--YYYY]}{[Degree] in [Field]}{[Institution]}{[City, Country]}{}{\vspace{1pt}
-Thesis: ``[Thesis Title].'' [Brief description of research focus.]
-}}
+\item{\cventry{In Progress}{B.S. Computer Science}{University of Central Florida}{}{}{}}
 
 \vspace{3pt}
 
-\item{\cventry{[YYYY--YYYY]}{[Degree] in [Field]}{[Institution]}{[City, Country]}{}{\vspace{1pt}
-[Brief description or key topics.]
-}}
+\item{\cventry{}{A.S. Computer Science}{Valencia College}{}{}{}}
 
+\vspace{3pt}
+
+\item{\cventry{Oct 2023--Oct 2024}{Digital Business Accelerator, Project Manager track}{Multiverse}{}{}{}}
+
+\end{itemize}
+
+% ============================================================
+%     CERTIFICATIONS
+% ============================================================
+
+\section{Certifications}
+\vspace{1pt}
+\begin{itemize}
+\item Certified in Cybersecurity (CC) -- (ISC)\textsuperscript{2}
+\item Front-End Web Development -- Udacity
+\item Apple Technical Support Specialist
 \end{itemize}
 
 % ============================================================
@@ -133,27 +173,7 @@ Thesis: ``[Thesis Title].'' [Brief description of research focus.]
 \section{Languages}
 \vspace{1pt}
 \begin{itemize}
-\item [Language 1] (native), [Language 2] (fluent), [Language 3] (intermediate).
-\end{itemize}
-
-% ============================================================
-%     PUBLICATIONS (optional)
-% ============================================================
-
-\section{Publications}
-\vspace{1pt}
-\begin{itemize}
-\item [Author(s)] ([Year]). [Title]. [Journal/Conference]. \href{[DOI_URL]}{DOI link}
-\end{itemize}
-
-% ============================================================
-%     HONORS AND AWARDS (optional)
-% ============================================================
-
-\section{Honors and Awards}
-\vspace{1pt}
-\begin{itemize}
-\item{\textbf{[Award Name]} -- [Event/Organization] ([Year]).}
+\item English, Spanish.
 \end{itemize}
 
 % ============================================================

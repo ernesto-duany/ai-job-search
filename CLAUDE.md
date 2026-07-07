@@ -1,10 +1,7 @@
-# Job Application Assistant for [YOUR_NAME]
-
-<!-- SETUP: This file is populated by running /setup -->
-<!-- After running /setup, all [PLACEHOLDER] tokens will be replaced with your actual information -->
+# Job Application Assistant for Ernesto Duany
 
 ## Role
-This repo is a job application workspace. Claude acts as a career advisor and application assistant for [YOUR_NAME], helping with:
+This repo is a job application workspace. Claude acts as a career advisor and application assistant for Ernesto Duany, helping with:
 1. **Job fit evaluation** - Assess job postings against your profile (skills, experience, behavioral traits)
 2. **CV tailoring** - Adapt existing CV templates (LaTeX/moderncv) to target specific roles
 3. **Cover letter writing** - Draft targeted cover letters using existing templates (LaTeX)
@@ -16,65 +13,77 @@ This repo is a job application workspace. Claude acts as a career advisor and ap
 <!-- This section is auto-populated by /setup. You can also fill it in manually. -->
 
 ### Identity
-- **Name:** [YOUR_NAME]
-- **Location:** [YOUR_CITY], [YOUR_COUNTRY] ([YOUR_COMMUTE_CONSTRAINTS])
-- **Languages:** [YOUR_LANGUAGES]
-- **Status:** [YOUR_EMPLOYMENT_STATUS]
-- **LinkedIn headline:** "[YOUR_LINKEDIN_HEADLINE]"
+- **Name:** Ernesto Duany
+- **Location:** Lake Mary, FL, USA (Hybrid; open to roles within ~40 miles of 32746, or fully remote)
+- **Languages:** English, Spanish
+- **Status:** Employed full-time (BNY Mellon), concurrently running OpSight USA as Founder
+- **LinkedIn headline:** "AI Solutions Architect | Product Owner | Full-Stack Development"
 
 ### Education
-<!-- List your degrees, most recent first -->
-- **[DEGREE_LEVEL] in [FIELD]** ([YEAR_START]-[YEAR_END]) - [INSTITUTION]
-  - Thesis: "[THESIS_TITLE]"
-  - Topics: [KEY_TOPICS]
+- **B.S. in Computer Science** (In Progress) - University of Central Florida
+- **A.S. in Computer Science** - Valencia College
+- **Digital Business Accelerator, Project Manager track** (Oct 2023-Oct 2024) - Multiverse
 
 ### Professional Experience
-<!-- List your roles, most recent first -->
-- **[JOB_TITLE]** ([START_DATE] - [END_DATE]) - **[COMPANY]** ([LOCATION])
-  - [KEY_RESPONSIBILITY_1]
-  - [KEY_RESPONSIBILITY_2]
-  - [KEY_ACHIEVEMENT]
+- **Founder | AI Solutions Architect & Product Owner** (Jan 2026 - Present) - **OpSight USA** (Lake Mary, FL, Self-Employed)
+  - Architect enterprise-grade full-stack applications and AI-enabled solutions in Next.js, owning solution architecture, systems integration, and deployment
+  - Built and shipped Sequoyah Careers, a healthcare staffing platform with a dynamic job-listing system and an application form integrated with Resend
+  - Lead discovery workshops with stakeholders, translating business requirements into technical blueprints and roadmaps
+- **Operations Program Lead** - Training, AI Enablement, Product Owner & Risk Oversight (Sep 2024 - Present) - **BNY Mellon**
+  - Lead a team of 30 operators, owning performance, training, and workflow improvements
+  - Designed and built a training platform from scratch, standardizing onboarding
+  - Product Owner for an enterprise AI agent rollout, reducing research time by up to 40%
+  - Designed intelligent automation workflows using Microsoft Power Platform / Power Automate
+- **Senior OFAC / AML Sanctions Review Operator, Level 4** (Oct 2023 - Sep 2024) - **BNY Mellon**
+  - Led OFAC sanctions screening on high-risk entities/jurisdictions; conducted EDD per BSA/AML requirements
+  - Contributed to process improvements that reduced false-positive rates
+- **Senior Business Systems Architect | AI Solutions Architect** (Jan 2020 - Mar 2026) - **Milenium Computer Services, Inc.** (Freelance, Remote)
+  - Primary client-facing liaison; led discovery sessions to automate manual processes
+  - Architected enterprise systems and digital transformation initiatives; built and delivered full-stack applications
+- **Full-Stack Developer Intern** (Jan 2017 - Jan 2020) - **Milenium Computer Services, Inc.** (Internship, Remote)
+  - Developed full-stack features across frontend and backend, building foundational web development experience
+- **Technical Support Specialist** (Apr 2023 - Oct 2023) - **Apple**
+  - Resolved hardware/software issues; maintained documentation for consistent resolutions
 
 ### Technical Skills
-- **Primary:** [YOUR_PRIMARY_SKILLS]
-- **Secondary:** [YOUR_SECONDARY_SKILLS]
-- **Domain:** [YOUR_DOMAIN_EXPERTISE]
-- **Software:** [YOUR_TOOLS_AND_SOFTWARE]
+- **Primary:** AI Solution Architecture, Generative AI & LLMs, AI Agent Design, Intelligent Automation, Next.js/React/Node.js Full-Stack Development
+- **Secondary:** Prompt Engineering, Microsoft Power Automate/Power Apps, Copilot Studio, AI Builder, REST API Design, Git/GitHub
+- **Domain:** Financial services & regulated compliance (OFAC/AML/BSA), digital transformation, product ownership, enterprise/solution architecture
+- **Software:** Next.js, React, Node.js, JavaScript, HTML/CSS, Vercel, Resend, Git/GitHub, Microsoft Power Platform, Copilot Studio, AI Builder, Claude Code (AI-assisted development)
 
 ### Certifications
-<!-- List relevant certifications with dates -->
-- **[CERTIFICATION_NAME]** - [HOURS]h - completed [DATE]
+- **Certified in Cybersecurity (CC)** - (ISC)²
+- **Front-End Web Development** - Udacity
+- **Apple Technical Support Specialist**
 
 ### Publications
-<!-- List peer-reviewed publications, if any -->
-- [AUTHOR_LIST] ([YEAR]). [TITLE]. [JOURNAL].
+None currently.
 
 ### Awards
-<!-- List relevant awards, hackathons, competitions -->
-- [AWARD_NAME] - [EVENT] ([YEAR])
+None currently.
 
 ### Behavioral Profile
-<!-- Your behavioral assessment results (PI, DISC, Myers-Briggs, or self-assessment) -->
-- **[TRAIT_1]** - [DESCRIPTION]
-- **[TRAIT_2]** - [DESCRIPTION]
-- **Strengths:** [YOUR_STRENGTHS]
-- **Growth areas:** [YOUR_GROWTH_AREAS]
-- **Thrives in:** [YOUR_IDEAL_ENVIRONMENT]
+<!-- Source: Predictive Index-style behavioral assessment provided by candidate -->
+- **Goal-Oriented & Conscientious** - Strong drive to achieve with excellent follow-through; self-disciplined, organized, detail-oriented
+- **Extroverted & Cooperative** - Sociable and energetic; values harmony and fair treatment; highly coachable
+- **Competitive & Motivated** - Strong inner drive, thrives on performance measurement, comfortable taking calculated risks
+- **Strengths:** Achievement drive, follow-through, conscientiousness, competitiveness, calm under pressure, self-confidence, team collaboration
+- **Growth areas:** Not yet assessed - the source assessment covered strengths only; update after a 360 review or further self-reflection
+- **Thrives in:** Fast-paced, goal-driven environments with clear performance measurement, stakeholder interaction, and room for calculated risk-taking; collaborative, service-oriented team culture
 
 ### What Excites You
-<!-- What motivates you professionally -->
-- [PASSION_1]
-- [PASSION_2]
+<!-- Inferred from career-direction answer and resume evidence - confirm/adjust -->
+- Building and deploying AI agents / intelligent automation systems hands-on, close to the end user (forward-deployed style work)
+- Owning a solution end-to-end, from discovery through architecture to shipped product
 
 ### Target Sectors
-<!-- Industries and companies you're targeting -->
-- [SECTOR_1]: [EXAMPLE_COMPANIES]
-- [SECTOR_2]: [EXAMPLE_COMPANIES]
+<!-- Suggested based on stated career direction - not yet confirmed by candidate -->
+- AI / Applied AI: companies hiring for Forward Deployed Engineer / AI-native engineer roles (e.g. Anthropic, OpenAI, Palantir, Scale AI - suggested examples)
+- Financial services & regulated tech: institutions running AI transformation programs (familiar territory from BNY Mellon)
 
 ### Deal-breakers
-<!-- Hard constraints on job search -->
-- [DEALBREAKER_1]
-- [DEALBREAKER_2]
+- Base salary below $100k
+- Contract-only positions are accepted but not preferred - full-time roles preferred
 
 ## Repo Structure
 - `cv/` - LaTeX CV variants (moderncv template, banking style)
