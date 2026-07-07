@@ -10,25 +10,32 @@
 \moderncvstyle{banking}
 \moderncvcolor{blue}
 
-% Force both first and last name AND section headings to render in moderncv
-% blue (color1). Default banking on lualatex+MiKTeX leaves these black, which
-% looks inconsistent with the rest of the blue accent scheme.
-\renewcommand*{\firstnamestyle}[1]{{\fontsize{34}{36}\bfseries\upshape\color{color1}#1}}
-\renewcommand*{\lastnamestyle}[1]{{\fontsize{34}{36}\bfseries\upshape\color{color1}#1}}
-\renewcommand*{\sectionstyle}[1]{{\sectionfont\color{color1}#1}}
+% Force the name AND section headings to render in moderncv blue (color1).
+% Default banking leaves these black, which looks inconsistent with the rest of
+% the blue accent scheme. moderncv renamed the name-style hook across versions:
+% older/MiKTeX builds expose \firstnamestyle/\lastnamestyle, while TeX Live uses
+% a single \namestyle. Override whichever exists so the blue name applies either
+% way (renewing an undefined command would error, hence the \@ifundefined guards).
+\makeatletter
+\@ifundefined{firstnamestyle}{}{\renewcommand*{\firstnamestyle}[1]{{\fontsize{34}{36}\bfseries\upshape\color{color1}#1}}}
+\@ifundefined{lastnamestyle}{}{\renewcommand*{\lastnamestyle}[1]{{\fontsize{34}{36}\bfseries\upshape\color{color1}#1}}}
+\@ifundefined{namestyle}{}{\renewcommand*{\namestyle}[1]{{\fontsize{34}{36}\bfseries\upshape\color{color1}#1}}}
+\@ifundefined{sectionstyle}{}{\renewcommand*{\sectionstyle}[1]{{\sectionfont\color{color1}#1}}}
+\makeatother
 
-\usepackage[utf8]{inputenc}
-\usepackage{hyperref}
-\hypersetup{
+% moderncv loads hyperref itself at the end of the preamble (with [unicode]), so
+% we must NOT load it here - doing so triggers an option clash. Defer \hypersetup
+% to \AtBeginDocument, after moderncv's own load has run.
+\AtBeginDocument{\hypersetup{
     colorlinks=true,
     linkcolor=blue,
     filecolor=magenta,
     urlcolor=blue,
     pdftitle={Ernesto Duany - CV},
-    pdfpagemode=FullScreen,
-}
+}}
 \usepackage[scale=0.80]{geometry}
 \usepackage{import}
+\usepackage{needspace}% keep \cventry titles from orphaning at a page break
 
 % personal data
 \name{Ernesto}{Duany}
@@ -109,6 +116,7 @@
 \vspace{3pt}
 
 % --- Milenium: Senior Business Systems Architect ---
+\needspace{5\baselineskip}
 \item{\cventry{Jan 2020--Mar 2026}{Senior Business Systems Architect | AI Solutions Architect}{Milenium Computer Services, Inc. (Freelance)}{Remote}{}{\vspace{1pt}
 \begin{itemize}
     \item Primary client-facing liaison, leading discovery sessions with operations and compliance stakeholders to automate manual processes

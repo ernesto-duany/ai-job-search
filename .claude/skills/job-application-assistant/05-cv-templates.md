@@ -25,25 +25,31 @@ Expected output: `Output written on main_<company>.pdf (2 pages, ...)`. Any page
 \moderncvstyle{banking}
 \moderncvcolor{blue}
 
-% Force both first and last name AND section headings to render in moderncv
-% blue (color1). Default banking on lualatex+MiKTeX leaves these black, which
-% looks inconsistent with the rest of the blue accent scheme.
-\renewcommand*{\firstnamestyle}[1]{{\fontsize{34}{36}\bfseries\upshape\color{color1}#1}}
-\renewcommand*{\lastnamestyle}[1]{{\fontsize{34}{36}\bfseries\upshape\color{color1}#1}}
-\renewcommand*{\sectionstyle}[1]{{\sectionfont\color{color1}#1}}
+% Force the name AND section headings to render in moderncv blue (color1).
+% moderncv renamed the name-style hook across versions: older/MiKTeX builds
+% expose \firstnamestyle/\lastnamestyle, while current TeX Live uses a single
+% \namestyle. Override whichever exists (renewing an undefined command errors,
+% hence the \@ifundefined guards) so the blue name applies on either toolchain.
+\makeatletter
+\@ifundefined{firstnamestyle}{}{\renewcommand*{\firstnamestyle}[1]{{\fontsize{34}{36}\bfseries\upshape\color{color1}#1}}}
+\@ifundefined{lastnamestyle}{}{\renewcommand*{\lastnamestyle}[1]{{\fontsize{34}{36}\bfseries\upshape\color{color1}#1}}}
+\@ifundefined{namestyle}{}{\renewcommand*{\namestyle}[1]{{\fontsize{34}{36}\bfseries\upshape\color{color1}#1}}}
+\@ifundefined{sectionstyle}{}{\renewcommand*{\sectionstyle}[1]{{\sectionfont\color{color1}#1}}}
+\makeatother
 
-\usepackage[utf8]{inputenc}
-\usepackage{hyperref}
-\hypersetup{
+% moderncv loads hyperref itself at the end of the preamble (with [unicode]), so
+% do NOT load it again here - that causes an option clash. Defer \hypersetup to
+% \AtBeginDocument, after moderncv's own load has run.
+\AtBeginDocument{\hypersetup{
     colorlinks=true,
     linkcolor=blue,
     filecolor=magenta,
     urlcolor=blue,
     pdftitle={[YOUR_NAME] - CV},
-    pdfpagemode=FullScreen,
-}
+}}
 \usepackage[scale=0.77]{geometry}
 \usepackage{import}
+\usepackage{needspace}% keep \cventry titles from orphaning at a page break
 
 % Personal data
 \name{[FIRST_NAME]}{[LAST_NAME]}
@@ -68,7 +74,11 @@ Expected output: `Output written on main_<company>.pdf (2 pages, ...)`. Any page
 
 ### Color overrides
 
-The three `\renewcommand*` lines in the preamble are required on lualatex+MiKTeX. Without them the firstname, lastname, and section headings render in black even though `\moderncvcolor{blue}` is set, which looks inconsistent with the rest of the blue accent scheme (links, bullet markers, contact icons). The override forces all three to use `color1` (moderncv's accent colour, which becomes blue under `\moderncvcolor{blue}`). Both names render bold; if you prefer the firstname in regular weight, change the firstnamestyle override from `\bfseries` to `\mdseries`. Don't drop the override - on most modern installs the defaults render visibly wrong.
+The `\renewcommand*` lines in the preamble force the name and section headings to use `color1` (moderncv's accent colour, blue under `\moderncvcolor{blue}`). Without them these render black even though `\moderncvcolor{blue}` is set, which clashes with the rest of the blue accent scheme (links, bullet markers, contact icons). moderncv **renamed the name-style hook across versions** - older/MiKTeX builds use `\firstnamestyle`/`\lastnamestyle`, current TeX Live uses a single `\namestyle` - so the block guards each with `\@ifundefined` and overrides whichever exists. Renewing an undefined command errors out, which is why the guards are required; keep them so the CV compiles on both toolchains. The name renders bold; change `\bfseries` to `\mdseries` in the overrides for regular weight.
+
+### hyperref (do not load it yourself)
+
+moderncv loads `hyperref` at the end of its own preamble (with the `[unicode]` option). Loading it again with `\usepackage{hyperref}` triggers a fatal `Option clash for package hyperref`. Instead, do not load hyperref at all and defer your settings with `\AtBeginDocument{\hypersetup{...}}`, which runs after moderncv's load. This is already wired into the preamble above.
 
 ### Spacing inside itemize lists (important)
 
