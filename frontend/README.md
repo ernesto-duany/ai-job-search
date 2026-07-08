@@ -37,6 +37,31 @@ behind a reverse proxy or expose the port externally.
 
 No login/auth is needed beyond that binding — this is a single-local-user tool.
 
+### Opening it from your phone (same WiFi)
+
+Use `bun run dev:lan` instead of `bun run dev`. This binds to `0.0.0.0` instead of `127.0.0.1`, so
+the dashboard also accepts connections from other devices on your home network — not just your own
+computer.
+
+1. Start it: `bun run dev:lan` (or `bun run build && bun run start:lan` for the production build).
+2. Find your computer's LAN IP address:
+   - **macOS**: System Settings → Wi-Fi → Details (or `ipconfig getifaddr en0` in Terminal)
+   - **Windows**: `ipconfig` in Command Prompt, look for "IPv4 Address" under your WiFi adapter
+   - **Linux**: `ip addr show` or `hostname -I`
+   - It'll look like `192.168.x.x` or `10.0.x.x`.
+3. On your phone (connected to the **same WiFi network**), open `http://<that-IP>:3000`.
+
+This is real exposure, scoped to your home network: **any device on that WiFi can reach the
+dashboard and use its full capabilities** — writing repo files, spawning Claude sessions, editing
+your profile — with no login. That's a reasonable tradeoff on a trusted home network, but don't
+run `dev:lan` on shared/public WiFi (coffee shops, coworking spaces, hotels), and switch back to
+plain `bun run dev` when you're not actively using it from your phone.
+
+If you ever want this reachable from *outside* your home network (e.g. via Tailscale or ngrok),
+add at least a basic password gate first — there isn't one today, and internet-wide exposure with
+zero auth on a subprocess-spawning, file-writing backend is a materially different risk than a
+home LAN.
+
 ## How it works
 
 - `lib/claudeRunner.ts` spawns `claude -p "<prompt>" --output-format stream-json` (or `--resume
