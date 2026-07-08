@@ -62,8 +62,45 @@ add at least a basic password gate first — there isn't one today, and internet
 zero auth on a subprocess-spawning, file-writing backend is a materially different risk than a
 home LAN.
 
+## Multiple accounts (e.g. a spouse's own job search)
+
+Each account is a **completely separate clone of the outer `ai-job-search` repo** — its own
+`CLAUDE.md`, its own profile, its own tracker, its own `cv/`/`cover_letters/`, its own everything.
+This one running frontend just remembers which account's repo directory is currently active and
+points every action at it. There's no nested multi-tenant data model and no password — the account
+switcher in the top-right of the dashboard is a plain dropdown, matching this tool's existing
+"local, no-auth" design.
+
+**To add someone else:**
+
+1. Clone this repo again, somewhere else on the same machine (or their own machine, if they'll run
+   their own frontend instance): `git clone <repo-url> ~/ai-job-search-<their-name>`.
+2. In that new clone, run `claude` and `/setup` to onboard *their* profile — this is the same
+   onboarding flow you used for your own profile, untouched.
+3. Back in this dashboard, click **+ Add account** (top-right), give it a display name, and point
+   it at that clone's absolute path. It needs a `CLAUDE.md` there already, so do step 2 first.
+4. Switch between accounts with the dropdown. Whichever is active is what every button on the
+   dashboard operates on — Applications, Profile, and every action's Claude session all read and
+   write that account's repo, not the other one.
+
+A few things worth knowing:
+- Switching accounts triggers a full page reload so every page re-fetches the newly active
+  account's data — don't be surprised by the flash.
+- You can't switch accounts while a run is in progress (you'll get a "busy" error) — this avoids a
+  Claude session started under one account finishing its writes against the other.
+- There's currently no way to remove an account from the switcher through the UI — edit
+  `frontend/.data/accounts.json` directly if you need to (it's just `{active, accounts: {id:
+  {label, repoPath}}}`).
+- The lock that keeps only one Claude subprocess running at a time is global across all accounts,
+  not per-account — so two accounts' runs still queue behind each other, they don't run
+  concurrently. Fine for a switcher used by one person at a time; if you want true simultaneous use
+  from two devices, that lock would need to become per-account.
+
 ## How it works
 
+- `lib/accounts.ts` resolves which account's repo is currently active
+  (`frontend/.data/accounts.json`); `lib/repoRoot.ts` — used everywhere else — just delegates to
+  it, so every other module below picks up the active account automatically.
 - `lib/claudeRunner.ts` spawns `claude -p "<prompt>" --output-format stream-json` (or `--resume
   <session-id>` for follow-up turns) from the outer repo root, parses the NDJSON event stream, and
   yields normalized events.
