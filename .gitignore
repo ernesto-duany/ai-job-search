@@ -70,3 +70,9 @@ upskill/*.md
 .agents/**/node_modules/
 .agents/**/*.log
 .agents/usage/
+
+# Frontend (local web UI)
+frontend/.next/
+frontend/.data/
+frontend/.env.local
+frontend/next-env.d.ts

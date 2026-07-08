@@ -2,9 +2,40 @@
   "permissions": {
     "allow": [
       "Skill(job-application-assistant)",
+      "Skill(job-scraper)",
+      "Skill(upskill)",
+
+      "WebFetch(*)",
+      "WebSearch",
+      "Agent(general-purpose)",
+
+      "Write(cv/**)", "Edit(cv/**)",
+      "Write(cover_letters/**)", "Edit(cover_letters/**)",
+      "Write(job_scraper/**)", "Edit(job_scraper/**)",
+      "Write(upskill/**)",
+      "Write(job_search_tracker.csv)", "Edit(job_search_tracker.csv)",
+
+      "Edit(.claude/skills/job-application-assistant/01-candidate-profile.md)",
+      "Edit(.claude/skills/job-application-assistant/02-behavioral-profile.md)",
+      "Edit(.claude/skills/job-application-assistant/05-cv-templates.md)",
+      "Edit(.claude/skills/job-application-assistant/06-cover-letter-templates.md)",
+      "Edit(.claude/skills/job-application-assistant/07-interview-prep.md)",
+      "Edit(.claude/skills/job-scraper/search-queries.md)",
+      "Edit(CLAUDE.md)",
+
+      "Write(templates/**)", "Edit(templates/**)",
+      "Write(.agents/skills/**)", "Edit(.agents/skills/**)",
+
       "Bash(bun run:*)",
+      "Bash(bun install:*)",
       "Bash(python salary_lookup.py:*)",
-      "Bash(python3 salary_lookup.py:*)"
+      "Bash(python3 salary_lookup.py:*)",
+      "Bash(lualatex:*)", "Bash(xelatex:*)", "Bash(pdflatex:*)",
+      "Bash(timeout * lualatex:*)", "Bash(timeout * xelatex:*)",
+      "Bash(cd cv && lualatex:*)", "Bash(cd cover_letters && xelatex:*)",
+      "Bash(cd ../cv && lualatex:*)", "Bash(cd ../cover_letters && xelatex:*)",
+      "Bash(rm -f cv/*.aux)", "Bash(rm -f cv/*.log)", "Bash(rm -f cv/*.out)",
+      "Bash(rm -f cover_letters/*.aux)", "Bash(rm -f cover_letters/*.log)", "Bash(rm -f cover_letters/*.out)"
     ]
   }
 }

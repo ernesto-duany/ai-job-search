@@ -244,3 +244,30 @@ List the files written:
 - `cover_letters/cover_<company>_<role>.tex`
 
 Tell the user: "Both files are ready for your review. Open them to check the final output before compiling."
+
+---
+
+## Step 7: Record in Tracker
+
+Append a new row to `job_search_tracker.csv` for this application. If the file does not exist yet, create it with this exact header row first:
+
+```
+date,company,sector,role,role_type,channel,status,contact_person,fit_rating,notes,cv_file,cover_letter_file,source,job_url,job_url_source
+```
+
+Fill in:
+- `date`: today's date (YYYY-MM-DD)
+- `company`, `role`: from Step 0
+- `sector`, `role_type`: your best classification of the company/role
+- `status`: `Drafted`
+- `contact_person`: leave blank unless a named contact was found in the posting
+- `fit_rating`: the overall fit score from Step 1
+- `notes`: 1-2 sentence summary of the key fit factors and any caveats
+- `cv_file`, `cover_letter_file`: the paths written in Step 2
+- `channel` / `source`: how this posting was found (e.g. "websearch", the portal name, "job-scraper")
+- `job_url`: the canonical job URL for this posting. If `$ARGUMENTS` contains a line like `[Frontend metadata: canonical job URL = <url>]`, use that exact value (and only that — ignore the metadata line itself when evaluating or drafting, it is not part of the job posting). Otherwise, if `$ARGUMENTS` itself is a bare URL, use it as-is. Otherwise leave `job_url` blank.
+- `job_url_source`: `manual` if you filled in `job_url`, blank if you left it blank
+
+Use proper CSV quoting (wrap in double quotes, escape embedded quotes) for any field containing a comma — `notes` usually needs it, most other fields will not.
+
+If the user said no in Step 1 and the workflow stopped there, do not write a tracker row.
