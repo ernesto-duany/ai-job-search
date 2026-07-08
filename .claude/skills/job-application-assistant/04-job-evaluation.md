@@ -16,9 +16,9 @@ How well do the required/preferred skills align with the candidate's capabilitie
 | 40-59 | Partial match, significant upskilling needed |
 | 0-39 | Fundamental mismatch |
 
-**Strong match areas:** AI solution architecture & design, Generative AI/LLM applications, AI agents & intelligent automation workflows, full-stack development (Next.js/React/Node.js), product ownership & requirements gathering, stakeholder management, regulated/compliance environments (financial services)
-**Moderate match areas:** Formal enterprise-architecture frameworks/certifications (e.g. TOGAF), cloud-platform-specific engineering (AWS/Azure/GCP), MLOps and model-training pipelines
-**Weak match areas:** Deep hands-on ML/data science (model development, MLOps at scale) - profile shows AI enablement/adoption/product ownership rather than ML engineering; B.S. Computer Science still in progress
+**Strong match areas:** AI solution architecture & design, LLM application engineering (Claude API, MCP servers, tool-calling), multi-tenant SaaS architecture, database/Row-Level-Security design, AI governance (human-in-the-loop approval gates, risk-tier routing), full-stack development (Next.js/React/Node.js/Postgres), product ownership & requirements gathering, stakeholder management, regulated/compliance environments (financial services)
+**Moderate match areas:** Formal enterprise-architecture frameworks/certifications (e.g. TOGAF), cloud-platform-specific engineering (AWS/Azure/GCP), team-scale engineering leadership (OSx and Sequoyah Careers are solo-built)
+**Weak match areas:** Classical ML/data science (model training, MLOps for custom models) - profile shows deep LLM application engineering (building production systems on top of Claude) rather than training models from scratch; B.S. Computer Science still in progress
 
 ### 2. Experience Match (0-100)
 Does work history align with what they're looking for?
@@ -30,9 +30,9 @@ Does work history align with what they're looking for?
 | 40-59 | Adjacent experience, would need to make the case |
 | 0-39 | Unrelated experience |
 
-**Strong:** AI solution architecture, product ownership for AI/automation rollouts, full-stack web development, financial services compliance (OFAC/AML)
-**Moderate:** Enterprise architecture roles requiring formal certification (TOGAF etc.); pure software engineering roles requiring deep backend/infra specialization
-**Entry-level:** Data science / ML engineering roles requiring hands-on model-building experience
+**Strong:** AI solution architecture, LLM application/backend engineering (database security architecture, MCP servers), product ownership for AI/automation rollouts, full-stack web development, financial services compliance (OFAC/AML)
+**Moderate:** Enterprise architecture roles requiring formal certification (TOGAF etc.); engineering-team-leadership roles (OSx and Sequoyah Careers were built solo, not with a team to manage)
+**Entry-level:** Classical data science / ML engineering roles requiring hands-on model-training experience
 
 ### 3. Behavioral/Culture Fit (0-100)
 Does the role and company culture match the behavioral profile?

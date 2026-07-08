@@ -23,12 +23,22 @@
 
 ### Founder | AI Solutions Architect & Product Owner - OpSight USA (Jan 2026 - Present)
 Lake Mary, FL (Self-Employed)
-- Architect enterprise-grade full-stack applications and AI-enabled solutions in Next.js, defining solution architecture, application architecture, systems integration strategy, API design, and deployment architecture
+
+**OSx** (multi-tenant SaaS platform, in development):
+- Architected the AI layer of a multi-tenant SaaS platform (Next.js, Supabase/Postgres: 15 modules, 113 tables, approx. 104K LOC): 6 Claude-powered capabilities and 11 permission-scoped tools served over a Model Context Protocol (MCP) server, where every query executes as the user's RLS-scoped database client, making cross-tenant data leakage structurally impossible
+- Designed an "AI suggests, humans decide" governance model with zero AI write paths: database-level guards over 8 protected legal clause types, a risk-tier gate routing all financial/outbound actions to human confirmation, and sanitized tool errors, eliminating hallucinated-write and prompt-injection risk classes by construction
+- Built document-native extraction pipelines (PDF to Claude at temperature 0, Zod-validated schemas) powering an email-to-payment accounts-payable flow with two human approval gates, plus per-tenant bring-your-own-key infrastructure (AES-256-GCM) with metered quotas across 4 pricing tiers and prompt caching designed to cut repeat-context inference cost by up to approximately 90% (estimated)
+- Enforced tenant isolation as a hard merge gate: 499 authorization-re-checking Postgres RPCs, 159 default-deny RLS policies, and 861 automated tests, including a live-database CI suite proving cross-tenant denial, plus deterministic keyless stubs so CI and dev run the full AI product at zero API spend
+- Sole owner of end-to-end delivery across 24+ sequential release phases and 129 database migrations, running a plan-review-build-validate-document cycle
+
+**Sequoyah Careers** (healthcare staffing platform, shipped):
 - Built and shipped Sequoyah Careers, a healthcare staffing platform with a dynamic job-listing system and an end-to-end application form integrated with Resend for transactional email delivery
+
+General:
 - Lead discovery workshops with stakeholders, gathering business requirements and translating them into technical solution blueprints, product roadmaps, and implementation strategies
 - Drive product adoption by delivering user guides, documentation, and hands-on enablement, incorporating client feedback into iterative product improvements
 - Own product development end to end - from system design and architecture decisions through implementation, release, and post-launch adoption
-- Tools: Next.js, React, Node.js, JavaScript, HTML/CSS, Vercel, Resend, Git/GitHub, Three.js/WebGL, AI-assisted development (Claude Code)
+- Tools: Next.js, React, Node.js, TypeScript, Supabase/PostgreSQL, Zod, Anthropic Claude API, Model Context Protocol (MCP), JavaScript, HTML/CSS, Vercel, Resend, Git/GitHub, Three.js/WebGL, AI-assisted development (Claude Code)
 
 ### Operations Program Lead | Training, AI Enablement, Product Owner & Risk Oversight - BNY Mellon (Sep 2024 - Present)
 - Lead a team of 30 operators, owning day-to-day performance, training, and workflow improvements across the department
@@ -64,18 +74,22 @@ Remote (Internship)
 ## Technical Skills
 
 ### Programming & AI
-- **JavaScript** (proficient): Next.js (App Router), React, Node.js, HTML/CSS, REST APIs
-- **AI & Automation**: AI Solution Design, Generative AI, Large Language Models (LLMs), AI Workflow Design, AI Agents, Intelligent Automation, Prompt Engineering, AI Enablement, AI Adoption, Process Automation
+- **JavaScript/TypeScript** (proficient): Next.js (App Router), React, Node.js, HTML/CSS, REST APIs
+- **LLM Application Engineering**: Anthropic Claude API integration, Model Context Protocol (MCP) servers, permission-scoped tool design, document-native extraction pipelines (PDF to LLM, Zod-validated schemas), prompt caching, AI Agents, Prompt Engineering
+- **Database & Security Architecture**: Supabase/PostgreSQL, Row-Level Security (RLS) policy design, multi-tenant data isolation, authorization-re-checking RPCs, AES-256-GCM encryption
+- **AI Governance**: Human-in-the-loop approval gates, risk-tier action routing, hallucinated-write and prompt-injection risk mitigation by design
 - **Low-code/Automation platforms**: Microsoft Power Automate, Power Apps, Copilot Studio, AI Builder
+- **Testing & CI/CD**: Automated test suites at scale (800+ tests), live-database CI verification, deterministic keyless test stubs
 - AI-assisted development: Claude Code
 
 ### Domain Expertise
 - Solution / Enterprise / Systems / Technical / Application Architecture, Systems Integration, Solution Blueprinting, Technical Roadmapping
+- Multi-Tenant SaaS Architecture, AI Product Monetization (usage-metered pricing tiers, bring-your-own-key infrastructure)
 - Product Ownership, Product Strategy, Requirements Gathering, Stakeholder Management, Team Leadership, Digital Transformation, Change Management
 - Risk & Compliance: OFAC Sanctions Screening, AML Investigations, BSA/AML Compliance, Transaction Monitoring, Enhanced Due Diligence (EDD)
 
 ### Software & Tools
-Next.js, React, Node.js, JavaScript, HTML/CSS, Vercel, Resend, Git/GitHub, Microsoft Power Platform, Copilot Studio, AI Builder, Three.js/WebGL
+Next.js, React, Node.js, TypeScript, Supabase/PostgreSQL, Zod, Anthropic Claude API, Model Context Protocol (MCP), JavaScript, HTML/CSS, Vercel, Resend, Git/GitHub, Microsoft Power Platform, Copilot Studio, AI Builder, Three.js/WebGL
 
 ## Publications
 None currently.

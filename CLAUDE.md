@@ -26,7 +26,8 @@ This repo is a job application workspace. Claude acts as a career advisor and ap
 
 ### Professional Experience
 - **Founder | AI Solutions Architect & Product Owner** (Jan 2026 - Present) - **OpSight USA** (Lake Mary, FL, Self-Employed)
-  - Architect enterprise-grade full-stack applications and AI-enabled solutions in Next.js, owning solution architecture, systems integration, and deployment
+  - Architecting OSx, a multi-tenant SaaS platform (Next.js, Supabase/Postgres: 15 modules, 113 tables, approx. 104K LOC) with 6 Claude-powered AI capabilities served over a Model Context Protocol (MCP) server, every query scoped to the user's RLS-scoped database client
+  - Designed an "AI suggests, humans decide" governance model for OSx: zero AI write paths, database-level guards over 8 protected legal clause types, a risk-tier gate on financial/outbound actions, and 861 automated tests including a live-database CI suite proving cross-tenant denial
   - Built and shipped Sequoyah Careers, a healthcare staffing platform with a dynamic job-listing system and an application form integrated with Resend
   - Lead discovery workshops with stakeholders, translating business requirements into technical blueprints and roadmaps
 - **Operations Program Lead** - Training, AI Enablement, Product Owner & Risk Oversight (Sep 2024 - Present) - **BNY Mellon**
@@ -46,10 +47,10 @@ This repo is a job application workspace. Claude acts as a career advisor and ap
   - Resolved hardware/software issues; maintained documentation for consistent resolutions
 
 ### Technical Skills
-- **Primary:** AI Solution Architecture, Generative AI & LLMs, AI Agent Design, Intelligent Automation, Next.js/React/Node.js Full-Stack Development
-- **Secondary:** Prompt Engineering, Microsoft Power Automate/Power Apps, Copilot Studio, AI Builder, REST API Design, Git/GitHub
-- **Domain:** Financial services & regulated compliance (OFAC/AML/BSA), digital transformation, product ownership, enterprise/solution architecture
-- **Software:** Next.js, React, Node.js, JavaScript, HTML/CSS, Vercel, Resend, Git/GitHub, Microsoft Power Platform, Copilot Studio, AI Builder, Claude Code (AI-assisted development)
+- **Primary:** AI Solution Architecture, LLM Application Engineering (Claude API, Model Context Protocol servers), Multi-Tenant SaaS Architecture, Database/Row-Level Security (RLS) Design, Next.js/React/Node.js Full-Stack Development
+- **Secondary:** Prompt Engineering, Microsoft Power Automate/Power Apps, Copilot Studio, AI Builder, REST API Design, Zod schema validation, CI/CD & automated testing at scale, Git/GitHub
+- **Domain:** Financial services & regulated compliance (OFAC/AML/BSA), AI governance & responsible-AI design, digital transformation, product ownership, enterprise/solution architecture
+- **Software:** Next.js, React, Node.js, Supabase/PostgreSQL, JavaScript, TypeScript, HTML/CSS, Vercel, Resend, Git/GitHub, Microsoft Power Platform, Copilot Studio, AI Builder, Anthropic Claude API, Claude Code (AI-assisted development)
 
 ### Certifications
 - **Certified in Cybersecurity (CC)** - (ISC)²
