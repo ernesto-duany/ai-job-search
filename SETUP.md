@@ -22,13 +22,25 @@ Python 3.10+ is required for the salary lookup tool. Check with:
 python --version
 ```
 
+On Windows, `py --version` is often the most reliable check if `python` is not on your PATH.
+
 ### Bun (for job search tools)
 
-The job portal CLIs (four Danish portals plus the country-agnostic LinkedIn tool) are written in TypeScript and run with Bun:
+The job portal CLIs (four Danish portals plus the country-agnostic LinkedIn tool) are written in TypeScript and run with Bun.
+
+- macOS/Linux:
 
 ```bash
 curl -fsSL https://bun.sh/install | bash
 ```
+
+- Windows PowerShell:
+
+```powershell
+powershell -ExecutionPolicy Bypass -c "irm https://bun.sh/install.ps1 | iex"
+```
+
+If you prefer a package manager, `winget install Oven-sh.Bun` also works on Windows.
 
 ### LaTeX (for compiling CVs and cover letters)
 
@@ -40,6 +52,61 @@ Install a LaTeX distribution to compile the generated `.tex` files to PDF:
 
 The CV compiles with `lualatex` (pdflatex often fails on modern MiKTeX installs with `fontawesome5` font-expansion errors). The cover letter compiles with `xelatex` because `cover.cls` requires `fontspec` for its custom Lato/Raleway fonts.
 
+#### Minimal TeX install: TinyTeX/BasicTeX
+
+Full TeX distributions work out of the box, but minimal distributions need a few extra packages before the stock templates compile.
+
+On macOS, a user-level TinyTeX install avoids a system-wide installer and does not require `sudo`:
+
+```bash
+curl -fsSL https://yihui.org/tinytex/install-bin-unix.sh -o /tmp/tinytex-install-bin-unix.sh
+sh /tmp/tinytex-install-bin-unix.sh /tmp --no-path
+export PATH="$HOME/Library/TinyTeX/bin/universal-darwin:$PATH"
+```
+
+Then install the template dependencies:
+
+```bash
+tlmgr install \
+  moderncv fontawesome5 fontawesome6 academicons import luatexbase pgf \
+  titlesec textpos xltxtra xunicode cite realscripts
+```
+
+For BasicTeX/MacTeX, make sure the TeX binary directory is on `PATH` first (for example via `/Library/TeX/texbin`), then run the same `tlmgr install ...` command.
+
+Quick smoke tests after setup:
+
+```bash
+cd cv && lualatex -interaction=nonstopmode -halt-on-error main_example.tex && cd ..
+
+SMOKE_DIR="$(mktemp -d /tmp/ai-job-cover-smoke.XXXXXX)"
+cp -R cover_letters/cover.cls cover_letters/OpenFonts "$SMOKE_DIR/"
+cat >"$SMOKE_DIR/cover_smoke.tex" <<'EOF'
+\documentclass[]{cover}
+\begin{document}
+\namesection{Test}{Candidate}{test@example.com}
+\companyname{Example Company}
+\companyaddress{123 Hiring Street\\Example City}
+\currentdate{\today}
+\lettercontent{Dear Hiring Manager,}
+\lettercontent{This smoke test verifies that xelatex can load cover.cls and the bundled fonts.}
+\closing{Sincerely,}
+\signature{Test Candidate}
+\end{document}
+EOF
+(cd "$SMOKE_DIR" && xelatex -interaction=nonstopmode -halt-on-error cover_smoke.tex)
+```
+
+### Optional: pdftotext (for the ATS check)
+
+`/apply` runs an ATS parseability check on the compiled CV: it extracts the PDF's text layer and verifies contact details, reading order, and keyword coverage the way an applicant-tracking system sees them. This uses `pdftotext` from [poppler](https://poppler.freedesktop.org/), which is not part of TeX distributions:
+
+- **macOS:** `brew install poppler`
+- **Debian/Ubuntu:** `sudo apt install poppler-utils`
+- **Windows:** `choco install poppler`
+
+If `pdftotext` is missing, `/apply` skips the mechanical check with a warning and falls back to a visual keyword review — everything else works normally.
+
 ## 2. Fork and clone
 
 ```bash
@@ -50,7 +117,20 @@ cd ai-job-search
 Or manually: fork on GitHub, then clone your fork.
 
 ## 3. Install job search CLI dependencies
+Run these from the repository root.
 
+- PowerShell:
+
+```powershell
+$tools = @("jobbank-search", "jobdanmark-search", "jobindex-search", "jobnet-search", "linkedin-search")
+foreach ($tool in $tools) {
+  Set-Location ".agents/skills/$tool/cli"
+  bun install
+  Set-Location "..\..\..\.."
+}
+```
+
+- Bash / zsh / Git Bash:
 ```bash
 for tool in jobbank-search jobdanmark-search jobindex-search jobnet-search linkedin-search; do
   cd .agents/skills/$tool/cli && bun install && cd ../../../..
@@ -147,11 +227,15 @@ Claude will:
 After `/apply` creates the LaTeX files:
 
 ```bash
-# Compile CV
+# Bash / zsh / Git Bash
 cd cv && lualatex main_<company>.tex && cd ..
-
-# Compile cover letter
 cd cover_letters && xelatex cover_<company>_<role>.tex && cd ..
+```
+
+```powershell
+# PowerShell
+Set-Location cv; lualatex main_<company>.tex; Set-Location ..
+Set-Location cover_letters; xelatex cover_<company>_<role>.tex; Set-Location ..
 ```
 
 These commands apply to the stock templates (moderncv CV, `cover.cls` cover letter). If you'd rather use your own LaTeX template, run `/add-template` — it captures the template's compile engine, fonts, style rules, and page limit, test-compiles it, and wires it into `/apply`. See the "LaTeX templates" section in the README.

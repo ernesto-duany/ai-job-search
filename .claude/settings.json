@@ -30,6 +30,7 @@
       "Bash(bun install:*)",
       "Bash(python salary_lookup.py:*)",
       "Bash(python3 salary_lookup.py:*)",
+      "Bash(pdftotext:*)",
       "Bash(lualatex:*)", "Bash(xelatex:*)", "Bash(pdflatex:*)",
       "Bash(timeout * lualatex:*)", "Bash(timeout * xelatex:*)",
       "Bash(cd cv && lualatex:*)", "Bash(cd cover_letters && xelatex:*)",
