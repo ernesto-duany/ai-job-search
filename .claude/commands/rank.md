@@ -1,5 +1,5 @@
 ---
-allowed-tools: Read, Write, Edit, Agent, AskUserQuestion
+allowed-tools: Read, Write, Edit, Agent(job-content-researcher), AskUserQuestion
 ---
 
 # /rank - Triage Scraped Jobs into a Ranked Shortlist
@@ -48,7 +48,7 @@ State how many jobs will be ranked before proceeding.
 
 ## Step 2: Batch-Fetch and Score
 
-Dispatch parallel `general-purpose` agents via the **Agent tool**, ~5 jobs per agent (a single agent is fine for ≤5 jobs). Token-efficiency rules, consistent with `/apply`:
+Dispatch parallel `job-content-researcher` agents via the **Agent tool** (not `general-purpose` — this step fetches and processes the rawest untrusted content in the pipeline, a whole batch of unreviewed postings, so use the agent restricted to `Read`/`WebFetch`/`WebSearch` only), ~5 jobs per agent (a single agent is fine for ≤5 jobs). Token-efficiency rules, consistent with `/apply`:
 
 - Pass each agent everything it needs **inline in the prompt** - the job list (title, company, URL) and a compact scoring rubric extracted from the files you read in Step 1: the strong/moderate/weak skill match areas, direct/adjacent experience domains, behavioral thrive/drain factors, career goals, deal-breakers, and the location constraints. Do **not** make agents re-read the profile files.
 - Agents fetch each posting URL with WebFetch and score **only from actually fetched content**. If a URL is dead, redirects to a listing page, or the posting has expired, the agent marks that job `expired` - it never scores from the title alone and never fabricates posting content.

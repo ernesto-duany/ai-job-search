@@ -1,5 +1,5 @@
 ---
-allowed-tools: Read, Write, Edit, WebFetch, WebSearch, Agent, Bash(python salary_lookup.py:*), Bash(python3 salary_lookup.py:*), Bash(cd cv && lualatex:*), Bash(cd ../cover_letters && xelatex:*), Bash(cd ../cv && lualatex:*), Bash(cd cover_letters && xelatex:*), Bash(pdftotext:*), Bash(cd cv && pdftotext:*), Bash(rm -f cv/*.aux), Bash(rm -f cv/*.log), Bash(rm -f cv/*.out), Bash(rm -f cover_letters/*.aux), Bash(rm -f cover_letters/*.log), Bash(rm -f cover_letters/*.out)
+allowed-tools: Read, Write, Edit, WebFetch, WebSearch, Agent(job-content-researcher), Bash(python salary_lookup.py:*), Bash(python3 salary_lookup.py:*), Bash(cd cv && lualatex:*), Bash(cd ../cover_letters && xelatex:*), Bash(cd ../cv && lualatex:*), Bash(cd cover_letters && xelatex:*), Bash(pdftotext:*), Bash(cd cv && pdftotext:*), Bash(rm -f cv/*.aux), Bash(rm -f cv/*.log), Bash(rm -f cv/*.out), Bash(rm -f cover_letters/*.aux), Bash(rm -f cover_letters/*.log), Bash(rm -f cover_letters/*.out)
 ---
 
 # /apply - Drafter-Reviewer Job Application Workflow
@@ -105,7 +105,7 @@ Write both files to disk. Keep the exact text of both drafts in working memory �
 
 ## Step 3: REVIEWER - Research & Critique
 
-Use the **Agent tool** to spawn a `general-purpose` reviewer agent. The reviewer gets a fresh context, so pass the drafts **inline in the prompt** below (do not make the reviewer Read them). Scope the reviewer's file reads to content-critique essentials only — the reviewer does not need the LaTeX template files (`05`, `06`) to critique content, since those govern structural/LaTeX concerns the drafter already applied.
+Use the **Agent tool** to spawn a `job-content-researcher` reviewer agent (not `general-purpose` — this agent is restricted to `Read`/`WebFetch`/`WebSearch` only, since it's the part of this workflow that processes the rawest untrusted content: the raw job posting text and whatever it fetches researching the company). The reviewer gets a fresh context, so pass the drafts **inline in the prompt** below (do not make the reviewer Read them). Scope the reviewer's file reads to content-critique essentials only — the reviewer does not need the LaTeX template files (`05`, `06`) to critique content, since those govern structural/LaTeX concerns the drafter already applied.
 
 Replace `<COMPANY>`, `<ROLE>`, `<INSERT_JOB_POSTING_TEXT_HERE>`, `<INSERT_CV_DRAFT_HERE>`, and `<INSERT_COVER_LETTER_DRAFT_HERE>` with actual values before dispatching.
 

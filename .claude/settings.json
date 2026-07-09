@@ -8,6 +8,7 @@
       "WebFetch(*)",
       "WebSearch",
       "Agent(general-purpose)",
+      "Agent(job-content-researcher)",
 
       "Write(cv/**)", "Edit(cv/**)",
       "Write(cover_letters/**)", "Edit(cover_letters/**)",
